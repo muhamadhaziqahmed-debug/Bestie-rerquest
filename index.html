@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Be My Bestie? 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated background blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <div id="app">
+
+    <!-- ── QUESTION SCREEN ── -->
+    <div class="card" id="question-screen">
+      <span class="mascot" id="mascot">🐻</span>
+      <h1>Will you be my <span>Bestie?</span></h1>
+      <p class="subtitle">Choose wisely… (there's only one right answer 👀)</p>
+      <div class="btn-group">
+        <button class="btn btn-yes" id="yes-btn" onclick="sayYes()">Yes! 🎉</button>
+        <button class="btn btn-no"  id="no-btn"  onmouseover="runAway()" onclick="noClick()">No 🙅</button>
+      </div>
+      <p id="excuse"></p>
+    </div>
+
+    <!-- ── YES SCREEN ── -->
+    <div class="card" id="yes-screen">
+      <span class="mascot" style="animation:none; font-size:96px;">🥳</span>
+      <h1>YAY BESTIES<br>FOREVER!</h1>
+      <p class="sub">💖 Official Bestie Certificate Unlocked 💖</p>
+
+      <div class="badge-row">
+        <span class="badge">🌟 Snack Partner</span>
+        <span class="badge">💬 24/7 Texter</span>
+        <span class="badge">🛡️ Hype Human</span>
+      </div>
+
+      <div class="bestie-card">
+        <div class="rule">✅ You are legally required to laugh at each other's jokes.</div>
+        <div class="rule">✅ Mandatory snack sharing is now in effect.</div>
+        <div class="rule">✅ Venting sessions: unlimited &amp; free of charge.</div>
+        <div class="rule">✅ Chaos energy must be matched at all times.</div>
+        <div class="rule">🚫 No being sane without the other. Ever.</div>
+      </div>
+
+      <button class="restart-btn" onclick="restart()">↩ Wait, let me ask again</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
